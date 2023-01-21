@@ -8,7 +8,7 @@ namespace UdpController
     {
         public void OnSubmit(InputAction.CallbackContext context)
         {
-            Debug.Log("Hello!")
+            Debug.Log("Hello!");
         }
     }
 }
