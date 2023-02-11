@@ -48,7 +48,7 @@
                 {
                     "name": "",
                     "id": "c497db74-7e89-4a55-98b5-d3feb6bd5399",
-                    "path": "<Keyboard>/1",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -59,7 +59,7 @@
                 {
                     "name": "",
                     "id": "2cea15f0-002f-4946-a0bb-0f22ce17985f",
-                    "path": "<Keyboard>/2",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

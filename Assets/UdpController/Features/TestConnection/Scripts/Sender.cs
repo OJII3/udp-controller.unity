@@ -8,6 +8,7 @@ using System.Threading;
 using System.Text;
 using TMPro;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -19,10 +20,10 @@ namespace UdpController
     public class Sender : MonoBehaviour
     {
         private bool _isConnecting;
-        
+
         // target
         private int _targetPort = 8887;
-        private string _targetHost = "172.29.140.128";
+        private string _targetHost = "";
 
         // client
         private static UdpClient _udpClient;
@@ -33,34 +34,40 @@ namespace UdpController
         [SerializeField] private TMP_InputField targetHostField;
         [SerializeField] private TMP_InputField targetPortField;
         [SerializeField] private TMP_InputField messageField;
-        
+
 
         private void Start()
         {
             _udpClient = new UdpClient();
-            _udpClient.Client.ReceiveTimeout = 20;
-            _udpClient.Connect(_targetHost, _targetPort);
+            _isConnecting = false;
 
+            targetHostField.text = _targetHost;
+            targetPortField.text = _targetPort.ToString();
+            
             _customInputActions = new CustomInputActions();
             _customInputActions.Enable();
             _customInputActions.UI.Connect.started += OnConnect;
             _customInputActions.UI.Close.started += OnClose;
             _customInputActions.UI.Submit.started += OnSubmit;
 
-            _isConnecting = true;
-
             Debug.Log("Started!");
         }
 
         private void OnConnect(InputAction.CallbackContext context)
         {
-            if (_isConnecting) return;
-            _udpClient = new UdpClient();
+            if (_isConnecting)
+            {
+                Debug.Log($"You are already connected!");
+                return;
+            };
+
             _targetHost = targetHostField.text;
             _targetPort = int.Parse(targetPortField.text);
+
             _udpClient.Connect(_targetHost, _targetPort);
             _isConnecting = true;
-            Debug.Log("Connected!");
+
+            Debug.Log($"Connect to {_targetHost}:{_targetPort}, status: {_udpClient.Client.IsBound}");
         }
 
         private void OnClose(InputAction.CallbackContext context)
