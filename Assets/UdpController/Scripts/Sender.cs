@@ -14,16 +14,9 @@ using UnityEngine.UI;
 
 namespace UdpController
 {
-    /// <summary>
-    /// Send Message via UDP
-    /// </summary>
     public class Sender : MonoBehaviour
     {
         private bool _isConnecting;
-
-        // target
-        private int _targetPort = 8887;
-        private string _targetHost = "";
 
         // client
         private static UdpClient _udpClient;
@@ -31,7 +24,7 @@ namespace UdpController
         // io
         private CustomInputActions _customInputActions;
 
-        [SerializeField] private TMP_InputField targetHostField;
+        [SerializeField] private TMP_InputField targetIPField;
         [SerializeField] private TMP_InputField targetPortField;
         [SerializeField] private TMP_InputField messageField;
 
@@ -41,9 +34,6 @@ namespace UdpController
             _udpClient = new UdpClient();
             _isConnecting = false;
 
-            targetHostField.text = _targetHost;
-            targetPortField.text = _targetPort.ToString();
-            
             _customInputActions = new CustomInputActions();
             _customInputActions.Enable();
             _customInputActions.UI.Connect.started += OnConnect;
@@ -61,13 +51,13 @@ namespace UdpController
                 return;
             };
 
-            _targetHost = targetHostField.text;
-            _targetPort = int.Parse(targetPortField.text);
-
-            _udpClient.Connect(_targetHost, _targetPort);
+            _udpClient.Connect(targetIPField.text, int.Parse(targetPortField.text));
             _isConnecting = true;
+            
+            targetIPField.readOnly = true;
+            targetPortField.readOnly = true;
 
-            Debug.Log($"Connect to {_targetHost}:{_targetPort}, status: {_udpClient.Client.IsBound}");
+            Debug.Log($"Start connecting");
         }
 
         private void OnClose(InputAction.CallbackContext context)
@@ -75,6 +65,10 @@ namespace UdpController
             if (!_isConnecting) return;
             _isConnecting = false;
             _udpClient.Close();
+            
+            targetIPField.readOnly = false;
+            targetPortField.readOnly = false;
+            
             Debug.Log("Closed!");
         }
 
