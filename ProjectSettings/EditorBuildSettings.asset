@@ -12,5 +12,6 @@ EditorBuildSettings:
     path: Assets/UdpController/Scenes/TestConnection.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 53a3cee5b2b1d4d4cb86583952640d24, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 905c4d114fcd6fa438882aa61c670b68, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 507998a01690847488380452c82b658a, type: 2}

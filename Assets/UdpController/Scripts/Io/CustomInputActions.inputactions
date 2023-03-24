@@ -1,0 +1,74 @@
+{
+    "name": "CustomInputActions",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "1cd1e72a-a38f-43e3-878e-db4ea1dfda9c",
+            "actions": [
+                {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "a20d815c-d73d-4f7a-9b8f-977d896bcd66",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Connect",
+                    "type": "Button",
+                    "id": "c3544dca-d6dd-4e9a-aec7-ff54956d9497",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Close",
+                    "type": "Button",
+                    "id": "079d332b-cf5f-4711-aa0f-251ee69e8ce3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "23c58e5b-323e-40c4-ae37-cdd1f4f1ec5f",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c497db74-7e89-4a55-98b5-d3feb6bd5399",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Connect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cea15f0-002f-4946-a0bb-0f22ce17985f",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Close",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
