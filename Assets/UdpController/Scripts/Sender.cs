@@ -1,32 +1,23 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Net;
-using System.Net.Sockets;
-using System.Threading;
+﻿using System.Net.Sockets;
 using System.Text;
 using TMPro;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime;
+using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 namespace UdpController
 {
     public class Sender : MonoBehaviour
     {
-        private bool _isConnecting;
-
         // client
         private static UdpClient _udpClient;
-
-        // io
-        private CustomInputActions _customInputActions;
 
         [SerializeField] private TMP_InputField targetIPField;
         [SerializeField] private TMP_InputField targetPortField;
         [SerializeField] private TMP_InputField messageField;
+
+        // io
+        private CustomInputActions _customInputActions;
+        private bool _isConnecting;
 
 
         private void Start()
@@ -43,21 +34,28 @@ namespace UdpController
             Debug.Log("Started!");
         }
 
+        private void OnDestroy()
+        {
+            _udpClient.Close();
+        }
+
         private void OnConnect(InputAction.CallbackContext context)
         {
             if (_isConnecting)
             {
-                Debug.Log($"You are already connected!");
+                Debug.Log("You are already connected!");
                 return;
-            };
+            }
+
+            ;
 
             _udpClient.Connect(targetIPField.text, int.Parse(targetPortField.text));
             _isConnecting = true;
-            
+
             targetIPField.readOnly = true;
             targetPortField.readOnly = true;
 
-            Debug.Log($"Start connecting");
+            Debug.Log("Start connecting");
         }
 
         private void OnClose(InputAction.CallbackContext context)
@@ -65,10 +63,10 @@ namespace UdpController
             if (!_isConnecting) return;
             _isConnecting = false;
             _udpClient.Close();
-            
+
             targetIPField.readOnly = false;
             targetPortField.readOnly = false;
-            
+
             Debug.Log("Closed!");
         }
 
@@ -78,11 +76,6 @@ namespace UdpController
             var dgram = Encoding.UTF8.GetBytes(messageField.text);
             _udpClient.Send(dgram, dgram.Length);
             Debug.Log("Message Sent!");
-        }
-
-        private void OnDestroy()
-        {
-            _udpClient.Close();
         }
     }
 }
