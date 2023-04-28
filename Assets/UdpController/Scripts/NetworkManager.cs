@@ -47,25 +47,8 @@ namespace UdpController
             _thread.Start();
 
             Debug.Log("Successfully connected!");
-            Log = "Successfully connected!\n" + Log;
+            AppendLog("Successfully connected!");
         }
-
-        // public static void Disconnect()
-        // {
-        //     if (!IsConnected || UDPClient == null)
-        //     {
-        //         Debug.Log("Already disconnected!");
-        //         Log += "Already disconnected!\n";
-        //         return;
-        //     }
-        //
-        //     if (_thread != null) _thread.Abort();
-        //
-        //     UDPClient?.Close();
-        //     UDPClient?.Dispose();
-        //     UDPClient = null;
-        //     IsConnected = false;
-        // }
 
         public static void Send(string message)
         {
@@ -77,7 +60,7 @@ namespace UdpController
             catch (SocketException e)
             {
                 Debug.Log("Not Connected!");
-                Log = "Not Connected!\n" + Log;
+                AppendLog($"Received: {e.Message}");
             }
         }
 
@@ -91,14 +74,20 @@ namespace UdpController
                     if (receivedMessage != string.Empty)
                     {
                         Debug.Log($"Received: {receivedMessage}");
-                        Log = $"Received: {receivedMessage}\n" + Log;
+                        AppendLog($"Received: {receivedMessage}");
                     }
                 }
                 catch (SocketException e)
                 {
                     Debug.Log(e.Message);
-                    Log = e.Message + "\n" + Log;
+                    AppendLog($"Received: {e.Message}");
                 }
+        }
+
+        private static void AppendLog(string log)
+        {
+            if (Log is { Length: > 1000 }) Log = Log.Substring(0, 1000);
+            Log = $"{log}\n{Log}";
         }
     }
 }

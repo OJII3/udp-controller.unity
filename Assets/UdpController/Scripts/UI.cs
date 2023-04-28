@@ -22,7 +22,7 @@ namespace UdpController
             closeButton.onClick.AddListener(OnClickClose);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             logField.text = NetworkManager.Log;
         }
