@@ -5,49 +5,43 @@ using UnityEngine.UI;
 
 namespace UdpController
 {
-    public class ButtonInput : MonoBehaviour
+    public class UI : MonoBehaviour
     {
         [SerializeField] private Button[] poleButtons;
         [SerializeField] private TMP_InputField targetIPField;
+        [SerializeField] private TMP_InputField targetPortField;
         [SerializeField] private Button connectButton;
-        private CustomInputActions _customInputActions;
+        [SerializeField] private Button closeButton;
+        [SerializeField] private TMP_InputField logField;
 
         private void Start()
         {
-            _customInputActions = new CustomInputActions();
-            _customInputActions.Enable();
-
             poleButtons.ToList()
                 .ForEach(button => button.onClick.AddListener(() => { OnClickPole(int.Parse(button.name)); }));
             connectButton.onClick.AddListener(OnClickConnect);
+            closeButton.onClick.AddListener(OnClickClose);
+        }
+
+        private void Update()
+        {
+            logField.text = NetworkManager.Log;
         }
 
         private void OnDestroy()
         {
-            _customInputActions.Disable();
-            NetworkManager.Close();
         }
 
         private void OnClickConnect()
         {
-            if (NetworkManager.IsConnecting)
-            {
-                Debug.Log("You are already connected!");
-                return;
-            }
+            NetworkManager.Connect(targetIPField.text, int.Parse(targetPortField.text));
+        }
 
-            NetworkManager.Connect(targetIPField.text, 8888);
+        private void OnClickClose()
+        {
         }
 
         private void OnClickPole(int poleNum)
         {
-            if (!NetworkManager.IsConnecting)
-            {
-                Debug.Log("You are not connected!");
-                return;
-            }
-
-            Debug.Log($"Pole {poleNum} clicked!");
             NetworkManager.Send($"{poleNum}");
         }
     }
