@@ -42,7 +42,7 @@ namespace UdpController
 
         private void OnClickPole(int poleNum)
         {
-            NetworkManager.Send($"{poleNum}");
+            NetworkManager.Send($"P.{poleNum}");
         }
     }
 }

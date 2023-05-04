@@ -42,40 +42,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "LeftStickUp",
-                    "type": "Button",
+                    "name": "LeftStickY",
+                    "type": "Value",
                     "id": "f93c4014-8016-4a5a-a616-402a2e3082e7",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
+                    "expectedControlType": "Integer",
+                    "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "LeftStickDown",
-                    "type": "Button",
-                    "id": "d386fd4a-9c3b-47a2-af50-e69d3a03140f",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LeftStickLeft",
-                    "type": "Button",
+                    "name": "LeftStickX",
+                    "type": "Value",
                     "id": "220db42a-ac5f-4b48-9c6d-2a5d9ef9484b",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
+                    "expectedControlType": "Axis",
+                    "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LeftStickRight",
-                    "type": "Button",
-                    "id": "47814715-b9e1-4c35-bec8-3c5ba9a9a0b3",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "LeftStickPress",
@@ -96,40 +78,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "RightStickRight",
-                    "type": "Button",
+                    "name": "RightStickY",
+                    "type": "Value",
                     "id": "a38ecca6-e914-4b02-b31e-bff965f5c7cc",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
+                    "expectedControlType": "Axis",
+                    "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "RightStickLeft",
-                    "type": "Button",
+                    "name": "RightStickX",
+                    "type": "Value",
                     "id": "241af2e1-d9ae-4d70-8b86-2afc33b4d6d4",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
+                    "expectedControlType": "Axis",
+                    "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RightStickDown",
-                    "type": "Button",
-                    "id": "b6247af8-a49a-46ef-9715-2281992d3cd6",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RightStickUp",
-                    "type": "Button",
-                    "id": "1001fc4f-1371-40a3-b297-b365b75f48ed",
-                    "expectedControlType": "Button",
-                    "processors": "AxisDeadzone(min=0.2)",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "DPadUp",
@@ -226,11 +190,11 @@
                 {
                     "name": "",
                     "id": "77609142-d989-4b81-9c37-69197853fae1",
-                    "path": "<Gamepad>/leftStick/up",
+                    "path": "<Gamepad>/leftStick/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LeftStickUp",
+                    "action": "LeftStickY",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -241,18 +205,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LeftStickLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "37c41623-a407-46ab-ae0f-82b4d5244fce",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LeftStickRight",
+                    "action": "LeftStickX",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -297,17 +250,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "LeftStickPress",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "82e30ada-24ec-48da-bfd3-8e2cb76499f0",
-                    "path": "<Gamepad>/leftStick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LeftStickDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -423,45 +365,23 @@
                 },
                 {
                     "name": "",
-                    "id": "56dd9e9b-177c-49ff-a8c5-55a46f5f08cc",
-                    "path": "<Gamepad>/rightStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RightStickUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0b75a15c-e44c-4a39-a7b4-302dbcacc7fc",
-                    "path": "<Gamepad>/rightStick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RightStickDown",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4fcc8716-f937-4b70-a28f-0099eaca77e2",
-                    "path": "<Gamepad>/rightStick/left",
+                    "path": "<Gamepad>/rightStick/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RightStickLeft",
+                    "action": "RightStickX",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "bc36e5a5-bfa9-4e37-b72b-0215ce165b93",
-                    "path": "<Gamepad>/rightStick/right",
+                    "path": "<Gamepad>/rightStick/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RightStickRight",
+                    "action": "RightStickY",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

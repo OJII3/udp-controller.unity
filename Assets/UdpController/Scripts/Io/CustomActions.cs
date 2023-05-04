@@ -64,40 +64,22 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""LeftStickUp"",
-                    ""type"": ""Button"",
+                    ""name"": ""LeftStickY"",
+                    ""type"": ""Value"",
                     ""id"": ""f93c4014-8016-4a5a-a616-402a2e3082e7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
+                    ""expectedControlType"": ""Integer"",
+                    ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""LeftStickDown"",
-                    ""type"": ""Button"",
-                    ""id"": ""d386fd4a-9c3b-47a2-af50-e69d3a03140f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""LeftStickLeft"",
-                    ""type"": ""Button"",
+                    ""name"": ""LeftStickX"",
+                    ""type"": ""Value"",
                     ""id"": ""220db42a-ac5f-4b48-9c6d-2a5d9ef9484b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""LeftStickRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""47814715-b9e1-4c35-bec8-3c5ba9a9a0b3"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""LeftStickPress"",
@@ -118,40 +100,22 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""RightStickRight"",
-                    ""type"": ""Button"",
+                    ""name"": ""RightStickY"",
+                    ""type"": ""Value"",
                     ""id"": ""a38ecca6-e914-4b02-b31e-bff965f5c7cc"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""RightStickLeft"",
-                    ""type"": ""Button"",
+                    ""name"": ""RightStickX"",
+                    ""type"": ""Value"",
                     ""id"": ""241af2e1-d9ae-4d70-8b86-2afc33b4d6d4"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""RightStickDown"",
-                    ""type"": ""Button"",
-                    ""id"": ""b6247af8-a49a-46ef-9715-2281992d3cd6"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""RightStickUp"",
-                    ""type"": ""Button"",
-                    ""id"": ""1001fc4f-1371-40a3-b297-b365b75f48ed"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": ""AxisDeadzone(min=0.2)"",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""DPadUp"",
@@ -248,11 +212,11 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""77609142-d989-4b81-9c37-69197853fae1"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""path"": ""<Gamepad>/leftStick/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""LeftStickUp"",
+                    ""action"": ""LeftStickY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -263,18 +227,7 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""LeftStickLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""37c41623-a407-46ab-ae0f-82b4d5244fce"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LeftStickRight"",
+                    ""action"": ""LeftStickX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -319,17 +272,6 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LeftStickPress"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""82e30ada-24ec-48da-bfd3-8e2cb76499f0"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LeftStickDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -445,45 +387,23 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""56dd9e9b-177c-49ff-a8c5-55a46f5f08cc"",
-                    ""path"": ""<Gamepad>/rightStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""RightStickUp"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0b75a15c-e44c-4a39-a7b4-302dbcacc7fc"",
-                    ""path"": ""<Gamepad>/rightStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""RightStickDown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""4fcc8716-f937-4b70-a28f-0099eaca77e2"",
-                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""path"": ""<Gamepad>/rightStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""RightStickLeft"",
+                    ""action"": ""RightStickX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""bc36e5a5-bfa9-4e37-b72b-0215ce165b93"",
-                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""path"": ""<Gamepad>/rightStick/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""RightStickRight"",
+                    ""action"": ""RightStickY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -520,16 +440,12 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
         m_UI_Cross = m_UI.FindAction("Cross", throwIfNotFound: true);
         m_UI_Triangle = m_UI.FindAction("Triangle", throwIfNotFound: true);
         m_UI_Circle = m_UI.FindAction("Circle", throwIfNotFound: true);
-        m_UI_LeftStickUp = m_UI.FindAction("LeftStickUp", throwIfNotFound: true);
-        m_UI_LeftStickDown = m_UI.FindAction("LeftStickDown", throwIfNotFound: true);
-        m_UI_LeftStickLeft = m_UI.FindAction("LeftStickLeft", throwIfNotFound: true);
-        m_UI_LeftStickRight = m_UI.FindAction("LeftStickRight", throwIfNotFound: true);
+        m_UI_LeftStickY = m_UI.FindAction("LeftStickY", throwIfNotFound: true);
+        m_UI_LeftStickX = m_UI.FindAction("LeftStickX", throwIfNotFound: true);
         m_UI_LeftStickPress = m_UI.FindAction("LeftStickPress", throwIfNotFound: true);
         m_UI_RightStickPress = m_UI.FindAction("RightStickPress", throwIfNotFound: true);
-        m_UI_RightStickRight = m_UI.FindAction("RightStickRight", throwIfNotFound: true);
-        m_UI_RightStickLeft = m_UI.FindAction("RightStickLeft", throwIfNotFound: true);
-        m_UI_RightStickDown = m_UI.FindAction("RightStickDown", throwIfNotFound: true);
-        m_UI_RightStickUp = m_UI.FindAction("RightStickUp", throwIfNotFound: true);
+        m_UI_RightStickY = m_UI.FindAction("RightStickY", throwIfNotFound: true);
+        m_UI_RightStickX = m_UI.FindAction("RightStickX", throwIfNotFound: true);
         m_UI_DPadUp = m_UI.FindAction("DPadUp", throwIfNotFound: true);
         m_UI_DPadDown = m_UI.FindAction("DPadDown", throwIfNotFound: true);
         m_UI_DPadRight = m_UI.FindAction("DPadRight", throwIfNotFound: true);
@@ -605,16 +521,12 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Cross;
     private readonly InputAction m_UI_Triangle;
     private readonly InputAction m_UI_Circle;
-    private readonly InputAction m_UI_LeftStickUp;
-    private readonly InputAction m_UI_LeftStickDown;
-    private readonly InputAction m_UI_LeftStickLeft;
-    private readonly InputAction m_UI_LeftStickRight;
+    private readonly InputAction m_UI_LeftStickY;
+    private readonly InputAction m_UI_LeftStickX;
     private readonly InputAction m_UI_LeftStickPress;
     private readonly InputAction m_UI_RightStickPress;
-    private readonly InputAction m_UI_RightStickRight;
-    private readonly InputAction m_UI_RightStickLeft;
-    private readonly InputAction m_UI_RightStickDown;
-    private readonly InputAction m_UI_RightStickUp;
+    private readonly InputAction m_UI_RightStickY;
+    private readonly InputAction m_UI_RightStickX;
     private readonly InputAction m_UI_DPadUp;
     private readonly InputAction m_UI_DPadDown;
     private readonly InputAction m_UI_DPadRight;
@@ -633,16 +545,12 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
         public InputAction @Cross => m_Wrapper.m_UI_Cross;
         public InputAction @Triangle => m_Wrapper.m_UI_Triangle;
         public InputAction @Circle => m_Wrapper.m_UI_Circle;
-        public InputAction @LeftStickUp => m_Wrapper.m_UI_LeftStickUp;
-        public InputAction @LeftStickDown => m_Wrapper.m_UI_LeftStickDown;
-        public InputAction @LeftStickLeft => m_Wrapper.m_UI_LeftStickLeft;
-        public InputAction @LeftStickRight => m_Wrapper.m_UI_LeftStickRight;
+        public InputAction @LeftStickY => m_Wrapper.m_UI_LeftStickY;
+        public InputAction @LeftStickX => m_Wrapper.m_UI_LeftStickX;
         public InputAction @LeftStickPress => m_Wrapper.m_UI_LeftStickPress;
         public InputAction @RightStickPress => m_Wrapper.m_UI_RightStickPress;
-        public InputAction @RightStickRight => m_Wrapper.m_UI_RightStickRight;
-        public InputAction @RightStickLeft => m_Wrapper.m_UI_RightStickLeft;
-        public InputAction @RightStickDown => m_Wrapper.m_UI_RightStickDown;
-        public InputAction @RightStickUp => m_Wrapper.m_UI_RightStickUp;
+        public InputAction @RightStickY => m_Wrapper.m_UI_RightStickY;
+        public InputAction @RightStickX => m_Wrapper.m_UI_RightStickX;
         public InputAction @DPadUp => m_Wrapper.m_UI_DPadUp;
         public InputAction @DPadDown => m_Wrapper.m_UI_DPadDown;
         public InputAction @DPadRight => m_Wrapper.m_UI_DPadRight;
@@ -674,36 +582,24 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
             @Circle.started += instance.OnCircle;
             @Circle.performed += instance.OnCircle;
             @Circle.canceled += instance.OnCircle;
-            @LeftStickUp.started += instance.OnLeftStickUp;
-            @LeftStickUp.performed += instance.OnLeftStickUp;
-            @LeftStickUp.canceled += instance.OnLeftStickUp;
-            @LeftStickDown.started += instance.OnLeftStickDown;
-            @LeftStickDown.performed += instance.OnLeftStickDown;
-            @LeftStickDown.canceled += instance.OnLeftStickDown;
-            @LeftStickLeft.started += instance.OnLeftStickLeft;
-            @LeftStickLeft.performed += instance.OnLeftStickLeft;
-            @LeftStickLeft.canceled += instance.OnLeftStickLeft;
-            @LeftStickRight.started += instance.OnLeftStickRight;
-            @LeftStickRight.performed += instance.OnLeftStickRight;
-            @LeftStickRight.canceled += instance.OnLeftStickRight;
+            @LeftStickY.started += instance.OnLeftStickY;
+            @LeftStickY.performed += instance.OnLeftStickY;
+            @LeftStickY.canceled += instance.OnLeftStickY;
+            @LeftStickX.started += instance.OnLeftStickX;
+            @LeftStickX.performed += instance.OnLeftStickX;
+            @LeftStickX.canceled += instance.OnLeftStickX;
             @LeftStickPress.started += instance.OnLeftStickPress;
             @LeftStickPress.performed += instance.OnLeftStickPress;
             @LeftStickPress.canceled += instance.OnLeftStickPress;
             @RightStickPress.started += instance.OnRightStickPress;
             @RightStickPress.performed += instance.OnRightStickPress;
             @RightStickPress.canceled += instance.OnRightStickPress;
-            @RightStickRight.started += instance.OnRightStickRight;
-            @RightStickRight.performed += instance.OnRightStickRight;
-            @RightStickRight.canceled += instance.OnRightStickRight;
-            @RightStickLeft.started += instance.OnRightStickLeft;
-            @RightStickLeft.performed += instance.OnRightStickLeft;
-            @RightStickLeft.canceled += instance.OnRightStickLeft;
-            @RightStickDown.started += instance.OnRightStickDown;
-            @RightStickDown.performed += instance.OnRightStickDown;
-            @RightStickDown.canceled += instance.OnRightStickDown;
-            @RightStickUp.started += instance.OnRightStickUp;
-            @RightStickUp.performed += instance.OnRightStickUp;
-            @RightStickUp.canceled += instance.OnRightStickUp;
+            @RightStickY.started += instance.OnRightStickY;
+            @RightStickY.performed += instance.OnRightStickY;
+            @RightStickY.canceled += instance.OnRightStickY;
+            @RightStickX.started += instance.OnRightStickX;
+            @RightStickX.performed += instance.OnRightStickX;
+            @RightStickX.canceled += instance.OnRightStickX;
             @DPadUp.started += instance.OnDPadUp;
             @DPadUp.performed += instance.OnDPadUp;
             @DPadUp.canceled += instance.OnDPadUp;
@@ -750,36 +646,24 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
             @Circle.started -= instance.OnCircle;
             @Circle.performed -= instance.OnCircle;
             @Circle.canceled -= instance.OnCircle;
-            @LeftStickUp.started -= instance.OnLeftStickUp;
-            @LeftStickUp.performed -= instance.OnLeftStickUp;
-            @LeftStickUp.canceled -= instance.OnLeftStickUp;
-            @LeftStickDown.started -= instance.OnLeftStickDown;
-            @LeftStickDown.performed -= instance.OnLeftStickDown;
-            @LeftStickDown.canceled -= instance.OnLeftStickDown;
-            @LeftStickLeft.started -= instance.OnLeftStickLeft;
-            @LeftStickLeft.performed -= instance.OnLeftStickLeft;
-            @LeftStickLeft.canceled -= instance.OnLeftStickLeft;
-            @LeftStickRight.started -= instance.OnLeftStickRight;
-            @LeftStickRight.performed -= instance.OnLeftStickRight;
-            @LeftStickRight.canceled -= instance.OnLeftStickRight;
+            @LeftStickY.started -= instance.OnLeftStickY;
+            @LeftStickY.performed -= instance.OnLeftStickY;
+            @LeftStickY.canceled -= instance.OnLeftStickY;
+            @LeftStickX.started -= instance.OnLeftStickX;
+            @LeftStickX.performed -= instance.OnLeftStickX;
+            @LeftStickX.canceled -= instance.OnLeftStickX;
             @LeftStickPress.started -= instance.OnLeftStickPress;
             @LeftStickPress.performed -= instance.OnLeftStickPress;
             @LeftStickPress.canceled -= instance.OnLeftStickPress;
             @RightStickPress.started -= instance.OnRightStickPress;
             @RightStickPress.performed -= instance.OnRightStickPress;
             @RightStickPress.canceled -= instance.OnRightStickPress;
-            @RightStickRight.started -= instance.OnRightStickRight;
-            @RightStickRight.performed -= instance.OnRightStickRight;
-            @RightStickRight.canceled -= instance.OnRightStickRight;
-            @RightStickLeft.started -= instance.OnRightStickLeft;
-            @RightStickLeft.performed -= instance.OnRightStickLeft;
-            @RightStickLeft.canceled -= instance.OnRightStickLeft;
-            @RightStickDown.started -= instance.OnRightStickDown;
-            @RightStickDown.performed -= instance.OnRightStickDown;
-            @RightStickDown.canceled -= instance.OnRightStickDown;
-            @RightStickUp.started -= instance.OnRightStickUp;
-            @RightStickUp.performed -= instance.OnRightStickUp;
-            @RightStickUp.canceled -= instance.OnRightStickUp;
+            @RightStickY.started -= instance.OnRightStickY;
+            @RightStickY.performed -= instance.OnRightStickY;
+            @RightStickY.canceled -= instance.OnRightStickY;
+            @RightStickX.started -= instance.OnRightStickX;
+            @RightStickX.performed -= instance.OnRightStickX;
+            @RightStickX.canceled -= instance.OnRightStickX;
             @DPadUp.started -= instance.OnDPadUp;
             @DPadUp.performed -= instance.OnDPadUp;
             @DPadUp.canceled -= instance.OnDPadUp;
@@ -833,16 +717,12 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
         void OnCross(InputAction.CallbackContext context);
         void OnTriangle(InputAction.CallbackContext context);
         void OnCircle(InputAction.CallbackContext context);
-        void OnLeftStickUp(InputAction.CallbackContext context);
-        void OnLeftStickDown(InputAction.CallbackContext context);
-        void OnLeftStickLeft(InputAction.CallbackContext context);
-        void OnLeftStickRight(InputAction.CallbackContext context);
+        void OnLeftStickY(InputAction.CallbackContext context);
+        void OnLeftStickX(InputAction.CallbackContext context);
         void OnLeftStickPress(InputAction.CallbackContext context);
         void OnRightStickPress(InputAction.CallbackContext context);
-        void OnRightStickRight(InputAction.CallbackContext context);
-        void OnRightStickLeft(InputAction.CallbackContext context);
-        void OnRightStickDown(InputAction.CallbackContext context);
-        void OnRightStickUp(InputAction.CallbackContext context);
+        void OnRightStickY(InputAction.CallbackContext context);
+        void OnRightStickX(InputAction.CallbackContext context);
         void OnDPadUp(InputAction.CallbackContext context);
         void OnDPadDown(InputAction.CallbackContext context);
         void OnDPadRight(InputAction.CallbackContext context);

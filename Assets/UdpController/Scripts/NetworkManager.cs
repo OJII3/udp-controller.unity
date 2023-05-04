@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -57,10 +58,23 @@ namespace UdpController
                 var data = Encoding.ASCII.GetBytes(message);
                 SendClient.Send(data, data.Length);
             }
-            catch (SocketException e)
+            catch (Exception e)
             {
                 Debug.Log("Not Connected!");
                 AppendLog($"Received: {e.Message}");
+            }
+        }
+
+        public static void Send(byte[] data)
+        {
+            try
+            {
+                SendClient.Send(data, data.Length);
+            }
+            catch (Exception e)
+            {
+                Debug.Log("Not Connected!");
+                AppendLog($"Received {e.Message}");
             }
         }
 
