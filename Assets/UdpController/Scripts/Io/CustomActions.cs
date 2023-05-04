@@ -67,7 +67,7 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                     ""name"": ""LeftStickY"",
                     ""type"": ""Value"",
                     ""id"": ""f93c4014-8016-4a5a-a616-402a2e3082e7"",
-                    ""expectedControlType"": ""Integer"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true

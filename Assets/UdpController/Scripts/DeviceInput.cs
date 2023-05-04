@@ -24,8 +24,8 @@ namespace UdpController
 
             // 押している(true)間はbitを立てて、４つごとに１６進数に変換する(0x0 ~ 0xFとなるので、１文字で表現できる = ４bit)
             var buttonDataInt1 = 0;
-            buttonDataInt1 += /* _customActions.UI.R3 */ 0b0000;
-            buttonDataInt1 += /* _customActions.UI.L3 */ 0x0000;
+            buttonDataInt1 += _customActions.UI.LeftStickPress.inProgress ? 0b0001 : 0b0000;
+            buttonDataInt1 += _customActions.UI.RightStickPress.inProgress ? 0b0010 : 0x0000;
             buttonDataInt1 += _customActions.UI.Select.inProgress ? 0b0100 : 0x0000;
             buttonDataInt1 += _customActions.UI.Start.inProgress ? 0b1000 : 0x0000;
 
