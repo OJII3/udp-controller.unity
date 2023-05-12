@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,7 +43,10 @@ namespace UdpController
 
         private void OnClickPole(int poleNum)
         {
-            NetworkManager.Send($"P.{poleNum}");
+            var data = new byte[2];
+            data[0] = Encoding.UTF8.GetBytes("P")[0];
+            data[1] = (byte)poleNum;
+            NetworkManager.Send(data);
         }
     }
 }

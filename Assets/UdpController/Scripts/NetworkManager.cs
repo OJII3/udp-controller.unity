@@ -61,7 +61,7 @@ namespace UdpController
             catch (Exception e)
             {
                 Debug.Log("Not Connected!");
-                AppendLog($"Received: {e.Message}");
+                AppendLog($"Error: {e.Message}");
             }
         }
 
@@ -74,7 +74,7 @@ namespace UdpController
             catch (Exception e)
             {
                 Debug.Log("Not Connected!");
-                AppendLog($"Received {e.Message}");
+                AppendLog($"Error: {e.Message}");
             }
         }
 
@@ -83,10 +83,20 @@ namespace UdpController
             while (true)
                 try
                 {
-                    IPEndPoint ep = null;
-                    var receivedMessage = Encoding.UTF8.GetString(ReceiveClient.Receive(ref ep));
-                    if (receivedMessage != string.Empty)
+                    var receivedBytes = ReceiveClient.Receive(ref _remoteEndPoint);
+                    if (receivedBytes.Length > 0)
                     {
+                        // if bytes are decodable, decode them, otherwise, just print them
+                        var receivedMessage = "";
+                        try
+                        {
+                            receivedMessage = Encoding.ASCII.GetString(receivedBytes);
+                        }
+                        catch
+                        {
+                            receivedMessage = BitConverter.ToString(receivedBytes);
+                        }
+
                         Debug.Log($"Received: {receivedMessage}");
                         AppendLog($"Received: {receivedMessage}");
                     }
@@ -102,6 +112,11 @@ namespace UdpController
         {
             if (Log is { Length: > 1000 }) Log = Log.Substring(0, 1000);
             Log = $"{log}\n{Log}";
+        }
+
+        private static void ClearLog()
+        {
+            Log = "";
         }
     }
 }

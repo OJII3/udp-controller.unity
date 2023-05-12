@@ -223,7 +223,7 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""77a9c42b-f7b2-4e1a-aaa9-eb64396541af"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""path"": ""<Gamepad>/leftStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
